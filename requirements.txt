@@ -2,3 +2,4 @@ Flask
 ultralytics
 gunicorn
 tensorflow
+flask_cors
