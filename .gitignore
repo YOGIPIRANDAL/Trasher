@@ -7,7 +7,6 @@ instance/*
 .venv
 routes/face_classifier_model.h5
 routes/best_model.h5
-routes/best.pt
 /Trash-1/test/images/20240107_074514_jpg.rf.3e35a9354e8da3778ffb2da8400b4192.jpg
 /Trash-1/test/images/20240107_074635_jpg.rf.80c19240a076f6846975310df4922f3c.jpg
 /Trash-1/test/images/20240107_074722_jpg.rf.425df52db9b4c6ef49958f6eaf46f9c1.jpg

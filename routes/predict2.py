@@ -13,6 +13,10 @@ UPLOAD_FOLDER = 'uploads'
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 
+import urllib.request
+
+urllib.request.urlretrieve(
+        'https://storage.googleapis.com/default0987/best_model.h5', 'model.h5')
 
 @predict_bp2.route("/predict2", methods=["POST"])
 def predict():
@@ -23,7 +27,7 @@ def predict():
             filename = os.path.join(UPLOAD_FOLDER, photo.filename)
             photo.save(filename)
 
-            result = predict_class(filename, 'https://storage.googleapis.com/default0987/best_model.h5')  # Sesuaikan path model dengan lokasi dan nama sebenarnya
+            result = predict_class(filename, 'model.h5')  # Sesuaikan path model dengan lokasi dan nama sebenarnya
 
             return jsonify({"result": result})
 
