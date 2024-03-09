@@ -5,7 +5,7 @@ from flask import Blueprint, request, jsonify, url_for
 from ultralytics import YOLO
 
 predict_bp = Blueprint("predict", __name__)
-model = YOLO('https://storage.googleapis.com/default0987/best.pt')
+model = YOLO('routes/best.pt')
 
 
 @predict_bp.route("/predict", methods=["POST"])
