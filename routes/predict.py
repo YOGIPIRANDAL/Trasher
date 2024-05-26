@@ -29,11 +29,11 @@ def predict():
                 x_min, y_min = int(box[0]), int(box[1])
                 x_max, y_max = int(box[2]), int(box[3])
                 confidence = round(float(conf), 2)
-                cv2.rectangle(img, (x_min, y_min), (x_max, y_max), (255,0,255), 1)
+                cv2.rectangle(img, (x_min, y_min), (x_max, y_max), (255,0,0), 1)
 
                 # Tambahkan nama kelas dan confidence level ke dalam kotak pembatas
                 label_text = f"{class_name}: {confidence}"
-                cv2.putText(img, label_text, (x_min, y_min - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (255,0,255), 1)
+                cv2.putText(img, label_text, (x_min, y_min - 5), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255,0,0), 2)
 
         # Simpan gambar ke file
         cv2.imwrite("static/result.png", img)
